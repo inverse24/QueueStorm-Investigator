@@ -30,7 +30,7 @@ copy .env.example .env
 
 # Edit .env file:
 # GEMINI_API_KEY=your_gemini_api_key_here
-# ENABLE_GEMINI_ANALYSIS=true
+# ENABLE_GEMINI_ANALYSIS=false
 ```
 > Leave unset to use rule-based system (no API key required)
 
