@@ -6,6 +6,14 @@ from app.services.analyzer import analyze_ticket
 app = FastAPI(title="QueueStorm Investigator API", version="1.0.0")
 
 
+@app.get("/")
+def root():
+    return {
+        "message": "QueueStorm Investigator API is running.",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 @app.get("/health")
 def health() -> dict:
     return {"status": "ok"}
