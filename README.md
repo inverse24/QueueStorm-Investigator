@@ -4,7 +4,7 @@ A lightweight, production-ready FastAPI backend for intelligent ticket analysis 
 
 ---
 
-## 📋 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -43,7 +43,7 @@ Server runs at: `http://localhost:8000`
 
 ---
 
-## 🎯 API Endpoints
+##  API Endpoints
 
 ### 1. **Health Check**
 ```
@@ -56,7 +56,7 @@ GET /health
 }
 ```
 
-### 2. **Analyze Ticket** ⭐ Main Endpoint
+### 2. **Analyze Ticket**  Main Endpoint
 ```
 POST /analyze-ticket
 Content-Type: application/json
@@ -103,7 +103,7 @@ Content-Type: application/json
 
 ---
 
-## 📊 Models & Classification Logic
+##  Models & Classification Logic
 
 ### System Overview
 - **Type:** Rule-based intelligent classifier (no ML training required)
@@ -151,23 +151,23 @@ Content-Type: application/json
 ## 🛡️ Safety & Compliance
 
 ### Credential Protection
-- ✅ **Never requests** PIN/OTP/passwords in customer replies
-- ✅ **Always warns** "Do not share your PIN/OTP with anyone"
-- ✅ **Directs to** official support channels only
+-  **Never requests** PIN/OTP/passwords in customer replies
+-  **Always warns** "Do not share your PIN/OTP with anyone"
+-  **Directs to** official support channels only
 
 ### Refund Safety
-- ✅ **Never guarantees** direct refunds in agent replies
-- ✅ **Uses language:** "eligible amounts will be returned through official channels"
-- ✅ **Escalates to** human review for refund-related tickets
+-  **Never guarantees** direct refunds in agent replies
+-  **Uses language:** "eligible amounts will be returned through official channels"
+-  **Escalates to** human review for refund-related tickets
 
 ### Third-Party Protection
-- ✅ **Never directs** customers to third-party services
-- ✅ **Always references** official support or bank channels
-- ✅ **Logs for review** any suspicious third-party mentions
+-  **Never directs** customers to third-party services
+-  **Always references** official support or bank channels
+-  **Logs for review** any suspicious third-party mentions
 
 ---
 
-## 📝 Sample Test Cases
+##  Sample Test Cases
 
 Run the included test suite:
 ```bash
@@ -177,9 +177,9 @@ python test.py
 Expected output:
 ```
 Testing 10 sample cases...
-SAMPLE-01 ✅ wrong_transfer
-SAMPLE-02 ✅ phishing_or_social_engineering
-SAMPLE-03 ✅ duplicate_payment
+SAMPLE-01  wrong_transfer
+SAMPLE-02  phishing_or_social_engineering
+SAMPLE-03  duplicate_payment
 ...
 Passed 10/10 tests
 ```
@@ -208,7 +208,7 @@ Passed 10/10 tests
 
 ---
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -231,7 +231,7 @@ uvicorn==0.30.0
 
 ---
 
-## 🚀 Deployment Options
+##  Deployment Options
 
 ### Local Development
 ```bash
@@ -256,7 +256,7 @@ docker run -p 8000:8000 queuestorm-api:latest
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 ### Run All Tests
 ```bash
@@ -284,7 +284,7 @@ curl -X POST http://localhost:8000/analyze-ticket \
 
 ---
 
-## 📋 Submission Checklist
+##  Submission Checklist
 
 - [x] Two endpoints implemented (/health, /analyze-ticket)
 - [x] All 10 required response fields present
@@ -294,14 +294,14 @@ curl -X POST http://localhost:8000/analyze-ticket \
 - [x] Safety guardrails (credentials, refunds, third-parties)
 - [x] Bilingual support (English + Bengali)
 - [x] Transaction matching with duplicate detection
-- [x] Sample cases passing (10/10 ✅)
+- [x] Sample cases passing (10/10 )
 - [x] README with setup instructions
 - [x] requirements.txt provided
 - [x] No real secrets in code
 
 ---
 
-## 🎓 How It Works
+##  How It Works
 
 1. **Receive Complaint** → Ticket arrives via POST /analyze-ticket
 2. **Normalize Text** → Convert Bengali digits, lowercase, extract amounts
@@ -316,7 +316,7 @@ curl -X POST http://localhost:8000/analyze-ticket \
 
 ---
 
-## ⚙️ Technical Details
+##  Technical Details
 
 ### Performance
 - **Response Time:** < 5 seconds typical
@@ -340,7 +340,7 @@ Status: `422` (Validation Error)
 
 ---
 
-## 📞 Support & Troubleshooting
+##  Support & Troubleshooting
 
 ### Common Issues
 
@@ -365,7 +365,7 @@ pip install --upgrade -r requirements.txt
 
 ---
 
-## 📄 License & Attribution
+##  License & Attribution
 
 - **Framework:** FastAPI (https://fastapi.tiangolo.com)
 - **Validation:** Pydantic (https://docs.pydantic.dev)
@@ -374,20 +374,20 @@ pip install --upgrade -r requirements.txt
 
 ---
 
-## ✨ Features Highlight
+##  Features Highlight
 
-✅ Zero-dependency classification (works without Gemini)  
-✅ Bilingual support (English + Bengali) with digit normalization  
-✅ 8-case intelligent routing system  
-✅ Safety-first agent replies (PCI-DSS compliance)  
-✅ Transaction matching with deduplication  
-✅ Evidence consistency analysis  
-✅ Confidence scoring  
-✅ Department-based escalation  
-✅ Human review flagging  
-✅ 10/10 sample tests passing  
+- Zero-dependency classification (works without Gemini)  
+- Bilingual support (English + Bengali) with digit normalization  
+- 8-case intelligent routing system  
+- Safety-first agent replies (PCI-DSS compliance)  
+- Transaction matching with deduplication  
+- Evidence consistency analysis  
+- Confidence scoring  
+- Department-based escalation  
+- Human review flagging  
+- 10/10 sample tests passing  
 
 ---
 
 **Last Updated:** 2026-06-26  
-**Status:** ✅ Ready for Submission
+**Status:**  Ready for Submission
