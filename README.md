@@ -4,18 +4,24 @@ A lightweight, production-ready FastAPI backend for intelligent ticket analysis 
 
 ---
 
-## Live Endpoint
+## Live API
 
-The API is deployed and ready for use at:
+The QueueStorm Investigator API is deployed and publicly accessible on Render.
 
-**https://queuestorm-investigator-0odg.onrender.com**
+**Base URL**
+`https://queuestorm-investigator-0odg.onrender.com`
 
-Available Endpoints:
-- GET /health - Health check
-- POST /analyze-ticket - Analyze complaint tickets
+### Available Endpoints
 
+| Method | Endpoint          | Description                                                                  |
+| ------ | ----------------- | ---------------------------------------------------------------------------- |
+| `GET`  | `/`               | API information and available routes                                         |
+| `GET`  | `/health`         | Health check endpoint                                                        |
+| `POST` | `/analyze-ticket` | Analyze customer support tickets and return structured investigation results |
+| `GET`  | `/docs`           | Interactive Swagger API documentation                                        |
+
+You can use the interactive API documentation to test all endpoints directly from your browser.
 ---
-
 
 ##  Quick Start
 
