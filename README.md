@@ -4,6 +4,18 @@ A lightweight, production-ready FastAPI backend for intelligent ticket analysis 
 
 ---
 
+## Live Endpoint
+
+The API is deployed and ready for use at:
+
+**https://queuestorm-investigator-0odg.onrender.com**
+
+Available Endpoints:
+- GET /health - Health check
+- POST /analyze-ticket - Analyze complaint tickets
+
+---
+
 ##  Quick Start
 
 ### Prerequisites
@@ -259,17 +271,27 @@ docker run -p 8000:8000 queuestorm-api:latest
 ```
 
 ### Cloud Deployment
+
+CURRENT: Deployed on Render at https://queuestorm-investigator-0odg.onrender.com
+
+Other platforms available:
 - **Poridhi Labs:** Recommended for SUST hackathon
-- **Render, Railway, Fly.io, Vercel:** Free tier available
+- **Railway, Fly.io, Vercel:** Free tier available
 - **AWS EC2, Google Cloud, Azure:** Enterprise options
 
 ---
 
 ##  Testing
 
-### Run All Tests
+### Test Live Endpoint
 ```bash
-# Integration tests (hits live API)
+# Run tests against deployed live endpoint
+python test_live_endpoint.py
+```
+
+### Run All Tests Locally
+```bash
+# Integration tests (hits local API)
 python test.py
 
 # Unit tests (if available)
@@ -277,6 +299,22 @@ python -m pytest tests/ -v
 ```
 
 ### Manual Testing with cURL
+
+Test the live endpoint:
+```bash
+# Health check
+curl https://queuestorm-investigator-0odg.onrender.com/health
+
+# Analyze ticket
+curl -X POST https://queuestorm-investigator-0odg.onrender.com/analyze-ticket \
+  -H "Content-Type: application/json" \
+  -d '{
+    "ticket_id": "TEST-001",
+    "complaint": "I sent 500 to Ahmed but he never got it"
+  }'
+```
+
+Or test locally:
 ```bash
 # Health check
 curl http://localhost:8000/health
